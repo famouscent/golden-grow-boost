@@ -37,11 +37,7 @@ const Header = () => {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          isScrolled
-            ? "bg-background/95 backdrop-blur-lg shadow-card"
-            : "bg-transparent"
-        }`}
+        className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-black/50 backdrop-blur-md"
       >
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-20">
@@ -55,9 +51,9 @@ const Header = () => {
               className="flex items-center gap-2 group"
               whileHover={{ scale: 1.05 }}
             >
-              <Sparkles className="w-8 h-8 text-golden" />
-              <span className="text-2xl font-bold text-foreground">
-                Golden<span className="text-golden">Agency</span>
+              <Sparkles className="w-8 h-8 text-yellow-400" />
+              <span className="text-2xl font-bold text-white">
+                Golden<span className="text-yellow-400">Agency</span>
               </span>
             </motion.a>
 
@@ -71,7 +67,7 @@ const Header = () => {
                     e.preventDefault();
                     scrollToSection(item.href);
                   }}
-                  className="text-sm font-medium text-foreground/80 hover:text-golden transition-colors"
+                  className="text-sm font-medium text-white hover:text-yellow-400 transition-colors"
                 >
                   {item.name}
                 </a>
@@ -92,7 +88,7 @@ const Header = () => {
 
             {/* Mobile Menu Button */}
             <button
-              className="lg:hidden p-2 text-foreground"
+              className="lg:hidden p-2 text-white"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               aria-label="Toggle menu"
             >
