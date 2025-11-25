@@ -20,10 +20,10 @@ const Hero = () => {
   return (
     <section
       id="inicio"
-      className="relative min-h-screen flex items-center justify-center pt-20 pb-16 overflow-hidden"
+      className="relative min-h-screen flex items-center justify-center pt-20 pb-16 overflow-hidden bg-gradient-to-br from-slate-50 via-slate-100 to-slate-200"
     >
-      {/* Background Gradient */}
-      <div className="absolute inset-0 gradient-hero -z-10" />
+      {/* Subtle overlay */}
+      <div className="absolute inset-0 bg-gradient-to-br from-dark/5 via-dark/3 to-transparent -z-10" />
 
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
@@ -42,19 +42,19 @@ const Hero = () => {
               className="inline-flex items-center gap-2 px-4 py-2 bg-golden/10 rounded-full border border-golden/20"
             >
               <span className="w-2 h-2 bg-golden rounded-full animate-pulse" />
-              <span className="text-sm font-medium text-yellow-400">
+              <span className="text-sm font-medium text-golden">
                 Agencia de Marketing Digital
               </span>
             </motion.div>
 
             {/* Main Heading */}
             <div className="space-y-4">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight text-balance drop-shadow-[0_2px_6px_rgba(0,0,0,0.6)]">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-dark leading-tight text-balance">
                 Escalamos tu negocio con{" "}
-                <span className="text-yellow-400">campañas y contenido</span> que
+                <span className="text-golden">campañas y contenido</span> que
                 convierten en clientes
               </h1>
-              <p className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto lg:mx-0 text-balance drop-shadow-[0_2px_6px_rgba(0,0,0,0.6)]">
+              <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto lg:mx-0 text-balance">
                 Golden Agency es la agencia de marketing que se mete en tus
                 números: optimizamos anuncios, funnels y contenido para que
                 dejes de adivinar y empieces a escalar con datos.
@@ -69,10 +69,10 @@ const Hero = () => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.4 + index * 0.1 }}
-                  className="flex items-center gap-2 px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full border border-white/30"
+                  className="flex items-center gap-2 px-4 py-2 bg-golden/10 backdrop-blur-sm rounded-full border border-golden/20"
                 >
-                  <feature.icon className="w-4 h-4 text-yellow-400" />
-                  <span className="text-sm font-medium text-white">
+                  <feature.icon className="w-4 h-4 text-golden" />
+                  <span className="text-sm font-medium text-dark">
                     {feature.text}
                   </span>
                 </motion.div>
@@ -112,14 +112,14 @@ const Hero = () => {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="relative"
           >
-            <div className="relative rounded-2xl overflow-hidden shadow-elevated border border-yellow-400/20 before:absolute before:inset-0 before:bg-black/30 before:rounded-xl before:z-10">
+            <div className="relative rounded-2xl overflow-hidden shadow-elevated border border-golden/20">
               <img
                 src={heroDashboard}
                 alt="Dashboard de resultados de marketing"
                 className="w-full h-auto"
                 loading="eager"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-20" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
             </div>
 
             {/* Floating Stats Cards */}
@@ -127,22 +127,22 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.9 }}
-              className="absolute -bottom-6 -left-6 bg-card p-4 rounded-xl shadow-elevated border border-border z-30"
+              className="absolute -bottom-6 -left-6 bg-card p-4 rounded-xl shadow-elevated border border-border"
             >
               <div className="text-sm text-muted-foreground">ROAS Promedio</div>
-              <div className="text-3xl font-bold text-yellow-400">5.2x</div>
+              <div className="text-3xl font-bold text-golden">5.2x</div>
             </motion.div>
 
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1.1 }}
-              className="absolute -top-6 -right-6 bg-card p-4 rounded-xl shadow-elevated border border-border z-30"
+              className="absolute -top-6 -right-6 bg-card p-4 rounded-xl shadow-elevated border border-border"
             >
               <div className="text-sm text-muted-foreground">
                 Crecimiento Mensual
               </div>
-              <div className="text-3xl font-bold text-yellow-400">+247%</div>
+              <div className="text-3xl font-bold text-golden">+247%</div>
             </motion.div>
           </motion.div>
         </div>
